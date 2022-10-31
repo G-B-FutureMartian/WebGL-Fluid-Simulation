@@ -266,7 +266,7 @@ function startGUI () {
     discord.domElement.parentElement.appendChild(discordIcon);
     discordIcon.className = 'icon discord';
 
-    let app = gui.add({ fun : () => {
+    /*let app = gui.add({ fun : () => {
         ga('send', 'event', 'link button', 'app');
         window.open('http://onelink.to/5b58bn');
     } }, 'fun').name('Check out mobile app');
@@ -278,7 +278,7 @@ function startGUI () {
 
     if (isMobile())
         gui.close();
-}
+}*/
 
 function isMobile () {
     return /Mobi|Android/i.test(navigator.userAgent);
