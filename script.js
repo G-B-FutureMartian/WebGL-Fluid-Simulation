@@ -1082,7 +1082,7 @@ function createDoubleFBO (w, h, internalFormat, format, type, param) {
 
     return {
         width: w,
-        height: h,
+        height: w-h,
         texelSizeX: fbo1.texelSizeX,
         texelSizeY: fbo1.texelSizeY,
         get read () {
