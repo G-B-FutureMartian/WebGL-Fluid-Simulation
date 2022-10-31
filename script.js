@@ -266,7 +266,7 @@ function startGUI () {
     discord.domElement.parentElement.appendChild(discordIcon);
     discordIcon.className = 'icon discord';
 
-    /*let app = gui.add({ fun : () => {
+    let app = gui.add({ fun : () => {
         ga('send', 'event', 'link button', 'app');
         window.open('http://onelink.to/5b58bn');
     } }, 'fun').name('Check out mobile app');
@@ -278,7 +278,7 @@ function startGUI () {
 
     if (isMobile())
         gui.close();
-}*/
+}
 
 function isMobile () {
     return /Mobi|Android/i.test(navigator.userAgent);
@@ -1442,7 +1442,7 @@ function splat (x, y, dx, dy, color) {
     splatProgram.bind();
     gl.uniform1i(splatProgram.uniforms.uTarget, velocity.read.attach(0));
     gl.uniform1f(splatProgram.uniforms.aspectRatio, canvas.width / canvas.height);
-    gl.uniform2f(splatProgram.uniforms.point, x, y);
+    gl.uniform2f(splatProgram.uniforms.point, y, x);
     gl.uniform3f(splatProgram.uniforms.color, dx, dy, 0.0);
     gl.uniform1f(splatProgram.uniforms.radius, correctRadius(config.SPLAT_RADIUS / 100.0));
     blit(velocity.write);
